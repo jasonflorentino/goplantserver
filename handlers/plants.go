@@ -10,8 +10,6 @@ import (
 )
 
 func PlantsHandler(w http.ResponseWriter, r *http.Request) {
-	logger.Logger.Println("Handling request:", r.URL.Path)
-
 	content, err := ioutil.ReadFile("data/plants.json")
 	if err != nil {
 		logger.Logger.Fatal("Error reading file:", err)
